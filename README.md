@@ -35,7 +35,7 @@ Eldardiry, H., Sun, N., and Voisin, N. (2026). Reservoir Drought Resilience Unde
 |-------|---------|-----------------|-----|
 | CLM5 | ctsm5.1.dev118 | https://github.com/IMMM-SFA/im3-clm | https://zenodo.org/records/6653705 |
 | IM3 Components | 0cf45e8 | https://github.com/IMMM-SFA/im3components/tree/main/im3components/wrf_to_clm | |
-| mosartwmpy | v0.6.2 | https://zenodo.org/records/10493995 | |
+| mosartwmpy | v0.6.2 | https://zenodo.org/records/10493995 | https://doi.org/10.5281/zenodo.10493995 |
 
 ## Reproduce my experiment
 Clone the CLM5 repository ([https://github.com/ESCOMP/CTSM/tree/ctsm5.1.dev118](https://github.com/ESCOMP/CTSM/tree/ctsm5.1.dev118)) to set up the CLM5 model, you will need to download the TGW forcing data ([https://data.msdlive.org/records/ksw6r-2xv06](https://data.msdlive.org/records/ksw6r-2xv06)) and convert them into CLM input format using these scripts ([wrf_to_clm](https://github.com/IMMM-SFA/im3components/tree/main/im3components/wrf_to_clm)). In addition, hydrological parameter values in the default parameter file and the user name list file should be updated based the behavioral parameter values ([https://data.msdlive.org/records/41bw1-3q739](https://data.msdlive.org/records/41bw1-3q739)). Runoff from CLM5 will then be used as input into the mosartwmpy model ([https://zenodo.org/records/10493995](https://zenodo.org/records/10493995)) to generate reservoir storage level.
