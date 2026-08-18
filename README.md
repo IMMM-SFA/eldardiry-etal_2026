@@ -29,23 +29,21 @@ _your software reference here_
 
 ### Input data
 - TGW-WRF. https://tgw-data.msdlive.org/. DOI: https://doi.org/10.1038/s41597-023-02485-5, https://doi.org/10.57931/1885756
-- GCAM-SELECT-Demeter. https://data.msdlive.org/records/vy529-6eg15. DOI: https://doi.org/10.57931/2502083
 
 ### Output data
-- CLM5 soil moisture and GPP simulations. https://data.msdlive.org/uploads/v0j35-eqv54. DOI: https://doi.org/10.57931/3420371
+- CLM5-mosartwmpy simulation output by dam. https://zenodo.org/records/21333553. DOI: https://doi.org/10.5281/zenodo.21333553
 
 ## Contributing modeling software
 | Model | Version | Repository Link | DOI |
 |-------|---------|-----------------|-----|
 | CLM5 | ctsm5.1.dev118 | https://github.com/IMMM-SFA/im3-clm | https://zenodo.org/records/6653705 |
 | IM3 Components | 0cf45e8 | https://github.com/IMMM-SFA/im3components/tree/main/im3components/wrf_to_clm | |
+| mosartwmpy | v0.6.2 | https://zenodo.org/records/10493995 | |
 
 ## Reproduce my experiment
-Clone the CLM5 repository ([https://github.com/ESCOMP/CTSM/tree/ctsm5.1.dev118](https://github.com/ESCOMP/CTSM/tree/ctsm5.1.dev118)) to set up the CLM5 model. You will need to download the TGW forcing data ([https://data.msdlive.org/records/ksw6r-2xv06](https://data.msdlive.org/records/ksw6r-2xv06)) and convert it into CLM input format using these scripts ([wrf_to_clm](https://github.com/IMMM-SFA/im3components/tree/main/im3components/wrf_to_clm)).
+Clone the CLM5 repository ([https://github.com/ESCOMP/CTSM/tree/ctsm5.1.dev118](https://github.com/ESCOMP/CTSM/tree/ctsm5.1.dev118)) to set up the CLM5 model, you will need to download the TGW forcing data ([https://data.msdlive.org/records/ksw6r-2xv06](https://data.msdlive.org/records/ksw6r-2xv06)) and convert them into CLM input format using these scripts ([wrf_to_clm](https://github.com/IMMM-SFA/im3components/tree/main/im3components/wrf_to_clm)). In addition, hydrological parameter values in the default parameter file and the user name list file should be updated based the behavioral parameter values ([https://data.msdlive.org/records/41bw1-3q739](https://data.msdlive.org/records/41bw1-3q739)). Runoff from CLM5 will then be used as input into the mosartwmpy model ([https://zenodo.org/records/10493995](https://zenodo.org/records/10493995)) to generate reservoir storage level.
 
-You will also need to replace the default CLM surface and land use timeseries files using data from GCAM-SELECT-Demeter ([https://data.msdlive.org/records/vy529-6eg15](https://data.msdlive.org/records/vy529-6eg15)). In addition, hydrological parameter values in the default parameter file and the user namelist file should be updated based on the behavioral parameter values ([https://data.msdlive.org/records/41bw1-3q739](https://data.msdlive.org/records/41bw1-3q739)).
-
-The output data repository ([https://data.msdlive.org/uploads/v0j35-eqv54](https://data.msdlive.org/uploads/v0j35-eqv54)) already contains the soil moisture and GPP output from the CLM5 model, so you can skip rerunning the CLM5 model if you want to save time.
+The output data repository ([https://doi.org/10.5281/zenodo.21333553](https://doi.org/10.5281/zenodo.21333553)) already contains the dam reservoir storage output from the CLM5-mosartwmpy model so you can skip rerunning the model chain if you want to save time.
 
 ## Reproduce my figures
 Use the scripts found in the "figures" directory to reproduce the drought resilience map and drought signature changes figure used in this publication.
