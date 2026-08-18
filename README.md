@@ -22,9 +22,6 @@ Reservoir drought, a form of hydrological drought, is characterized by abnormall
 ## Journal reference
 Eldardiry, H., Sun, N., and Voisin, N. (2026). Reservoir Drought Resilience Under Future Warming Scenarios: Regional Disparities Across Heavily Regulated US Basins. *Earth's Future*, 14(7), e2025EF007984.
 
-## Code reference
-_your software reference here_
-
 ## Data reference
 
 ### Input data
