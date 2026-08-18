@@ -22,6 +22,9 @@ Reservoir drought, a form of hydrological drought, is characterized by abnormall
 ## Journal reference
 Eldardiry, H., Sun, N., and Voisin, N. (2026). Reservoir Drought Resilience Under Future Warming Scenarios: Regional Disparities Across Heavily Regulated US Basins. *Earth's Future*, 14(7), e2025EF007984.
 
+## Code reference
+_your software reference here_
+
 ## Data reference
 
 ### Input data
@@ -38,9 +41,9 @@ Eldardiry, H., Sun, N., and Voisin, N. (2026). Reservoir Drought Resilience Unde
 | mosartwmpy | v0.6.2 | https://zenodo.org/records/10493995 | https://doi.org/10.5281/zenodo.10493995 |
 
 ## Reproduce my experiment
-Clone the CLM5 repository ([https://github.com/ESCOMP/CTSM/tree/ctsm5.1.dev118](https://github.com/ESCOMP/CTSM/tree/ctsm5.1.dev118)) to set up the CLM5 model, you will need to download the TGW forcing data ([https://data.msdlive.org/records/ksw6r-2xv06](https://data.msdlive.org/records/ksw6r-2xv06)) and convert them into CLM input format using these scripts ([wrf_to_clm](https://github.com/IMMM-SFA/im3components/tree/main/im3components/wrf_to_clm)). In addition, hydrological parameter values in the default parameter file and the user name list file should be updated based the behavioral parameter values ([https://data.msdlive.org/records/41bw1-3q739](https://data.msdlive.org/records/41bw1-3q739)). Runoff from CLM5 will then be used as input into the mosartwmpy model ([https://zenodo.org/records/10493995](https://zenodo.org/records/10493995)) to generate reservoir storage level.
+Clone the [CLM5 repository](https://github.com/ESCOMP/CTSM/tree/ctsm5.1.dev118) to set up the CLM5 model, you will need to download the [TGW forcing data](https://data.msdlive.org/records/ksw6r-2xv06) and convert them into CLM input format using these [scripts](https://github.com/IMMM-SFA/im3components/tree/main/im3components/wrf_to_clm). In addition, hydrological parameter values in the default parameter file and the user name list file should be updated based the [behavioral parameter values](https://data.msdlive.org/records/41bw1-3q739). Runoff from CLM5 will then be used as input into the [mosartwmpy model](https://zenodo.org/records/10493995) to generate reservoir storage level.
 
-The output data repository ([https://doi.org/10.5281/zenodo.21333553](https://doi.org/10.5281/zenodo.21333553)) already contains the dam reservoir storage output from the CLM5-mosartwmpy model so you can skip rerunning the model chain if you want to save time.
+The [output data repository](https://doi.org/10.5281/zenodo.21333553) already contains the dam reservoir storage output from the CLM5-mosartwmpy model so you can skip rerunning the model chain if you want to save time.
 
 ## Reproduce my figures
 Use the scripts found in the "figures" directory to reproduce the drought resilience map and drought signature changes figure used in this publication.
